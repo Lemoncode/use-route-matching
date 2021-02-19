@@ -1,0 +1,26 @@
+# Common aux folders
+.awcache/
+.vscode/
+.idea/
+.cache/
+DEPRECATED/
+
+# Dependencies & Build
+node_modules/
+dist/
+build/
+build-storybook/
+src/mui/
+package-lock.json
+
+# Aux files
+*.cer
+*.log
+*/src/**/*.orig
+*/src/**/*.js.map
+
+# Win
+desktop.ini
+
+# MacOs
+.DS_Store
