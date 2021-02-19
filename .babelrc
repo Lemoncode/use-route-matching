@@ -1,0 +1,89 @@
+{
+  "env": {
+    // Compatibility Profile.
+    // ES5 output and CommonJS module format.
+    "es5_cjs": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "useBuiltIns": "usage",
+            "corejs": 3
+          }
+        ],
+        "@babel/preset-typescript",
+        "@babel/preset-react"
+      ]
+    },
+    // Compatibility Profile ES Modules.
+    // ES5 output with no module transformation (ES Modules syntax).
+    // Intended only to generate an index.esm.js.
+    "es5_esm": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "useBuiltIns": "usage",
+            "corejs": 3
+          }
+        ],
+        "@babel/preset-typescript",
+        "@babel/preset-react"
+      ]
+    },
+    // Future Profile.
+    // ES6 output with no module transformation (ES Modules syntax).
+    "es": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "useBuiltIns": "usage",
+            "corejs": 3,
+            "targets": {
+              "node": "6.5"
+            }
+          }
+        ],
+        "@babel/preset-typescript",
+        "@babel/preset-react"
+      ]
+    },
+    // Bundled Profile.
+    // ES5 output and UMD module format.
+    // To be consumed by <script> html tags.
+    "umd": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "useBuiltIns": "usage",
+            "corejs": 3
+          }
+        ],
+        "@babel/preset-typescript",
+        "@babel/preset-react"
+      ]
+    },
+    // Jest Profile.
+    // To be used by jest tests.
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "corejs": 3
+          }
+        ]
+      ]
+    }
+  },
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread",
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+}
