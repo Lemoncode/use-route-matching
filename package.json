@@ -1,6 +1,6 @@
 {
   "name": "use-route-matching",
-  "version": "0.0.0-alpha.7",
+  "version": "0.0.1",
   "description": "use route matching hook",
   "files": [
     "dist",
