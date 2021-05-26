@@ -1,5 +1,5 @@
 {
-  "name": "use-route-matching",
+  "name": "@lemoncode/use-route-matching",
   "version": "0.0.1",
   "description": "use route matching hook",
   "files": [
@@ -19,7 +19,7 @@
   "jsnext:main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/v-borrego/use-route-matching.git"
+    "url": "git+https://github.com/lemoncode/use-route-matching.git"
   },
   "keywords": [
     "react",
@@ -33,12 +33,12 @@
     "params",
     "history"
   ],
-  "author": "Victor Borrego Perez",
+  "author": "Lemoncode",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/v-borrego/use-route-matching/issues"
+    "url": "https://github.com/lemoncode/use-route-matching/issues"
   },
-  "homepage": "https://github.com/v-borrego/use-route-matching#readme",
+  "homepage": "https://github.com/lemoncode/use-route-matching#readme",
   "scripts": {
     "clean": "rimraf build/*",
     "clean:demo": "rimraf build-demo/*",
@@ -57,6 +57,7 @@
     "test:watch": "cross-env NODE_ENV=test jest --verbose --watchAll --config jest.json",
     "lint": "eslint \"src/**/*.{ts,tsx}\" --rule \"react-hooks/exhaustive-deps:off\"",
     "lint:fix": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\" && npm run lint -- --fix",
+    "prerelease": "npm run build",
     "release": "npm publish ./build",
     "release:local": "npm install ./build -g"
   },
