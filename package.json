@@ -61,6 +61,10 @@
     "release": "npm publish ./build",
     "release:local": "npm install ./build -g"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "dependencies": {
     "core-js": "^3.0.1"
   },
